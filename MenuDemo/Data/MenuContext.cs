@@ -22,6 +22,21 @@ public class MenuContext : DbContext
             .HasOne(di => di.Ingredient)
             .WithMany(i => i.DishIngredients)
             .HasForeignKey(di => di.IngredientId);
+
+
+            modelBuilder.Entity<Dish>().HasData(
+                new Dish { Id = 1, Name = "Doner Durum", Price = 12.99, ImageUrl = "https://www.ustadonerci.com/media/products/durum-et-doner_b.png" },
+                new Dish { Id = 2, Name = "Patlican Kebabi", Price = 9.99, ImageUrl = "https://i.nefisyemektarifleri.com/2022/05/29/orijinal-antep-usulu-patlican-kebabi-3.jpg" }
+            );
+
+            modelBuilder.Entity<Ingredient>().HasData(
+                new Ingredient { Id = 1, Name = "Lavas" },
+                new Ingredient { Id = 2, Name = "Et" },
+                new Ingredient { Id = 3, Name = "Domates" },
+                new Ingredient { Id = 4, Name = "Biber" },
+                new Ingredient { Id = 5, Name = "Patlican" },
+                new Ingredient { Id = 6, Name = "Kiyma" }
+            );
     }
 
     public DbSet<Dish> Dishes => Set<Dish>();
