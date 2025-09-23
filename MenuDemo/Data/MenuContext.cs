@@ -37,6 +37,17 @@ public class MenuContext : DbContext
                 new Ingredient { Id = 5, Name = "Patlican" },
                 new Ingredient { Id = 6, Name = "Kiyma" }
             );
+
+            modelBuilder.Entity<DishIngredient>().HasData(
+                new DishIngredient { DishId = 1, IngredientId = 1, Dish = null! , Ingredient = null! },
+                new DishIngredient { DishId = 1, IngredientId = 2, Dish = null! , Ingredient = null! },
+                new DishIngredient { DishId = 1, IngredientId = 3, Dish = null! , Ingredient = null! },
+                new DishIngredient { DishId = 1, IngredientId = 4, Dish = null! , Ingredient = null! },
+                new DishIngredient { DishId = 2, IngredientId = 5, Dish = null! , Ingredient = null! },
+                new DishIngredient { DishId = 2, IngredientId = 6, Dish = null! , Ingredient = null! },
+                new DishIngredient { DishId = 2, IngredientId = 3, Dish = null! , Ingredient = null! },
+                new DishIngredient { DishId = 2, IngredientId = 4, Dish = null! , Ingredient = null! }
+            );
     }
 
     public DbSet<Dish> Dishes => Set<Dish>();
