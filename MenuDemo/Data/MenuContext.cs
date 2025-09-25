@@ -39,14 +39,14 @@ public class MenuContext : DbContext
             );
 
             modelBuilder.Entity<DishIngredient>().HasData(
-                new DishIngredient { DishId = 1, IngredientId = 1, Dish = null! , Ingredient = null! },
-                new DishIngredient { DishId = 1, IngredientId = 2, Dish = null! , Ingredient = null! },
-                new DishIngredient { DishId = 1, IngredientId = 3, Dish = null! , Ingredient = null! },
-                new DishIngredient { DishId = 1, IngredientId = 4, Dish = null! , Ingredient = null! },
-                new DishIngredient { DishId = 2, IngredientId = 5, Dish = null! , Ingredient = null! },
-                new DishIngredient { DishId = 2, IngredientId = 6, Dish = null! , Ingredient = null! },
-                new DishIngredient { DishId = 2, IngredientId = 3, Dish = null! , Ingredient = null! },
-                new DishIngredient { DishId = 2, IngredientId = 4, Dish = null! , Ingredient = null! }
+                new DishIngredient { DishId = 1, IngredientId = 1 },
+                new DishIngredient { DishId = 1, IngredientId = 2 },
+                new DishIngredient { DishId = 1, IngredientId = 3 },
+                new DishIngredient { DishId = 1, IngredientId = 4 },
+                new DishIngredient { DishId = 2, IngredientId = 5 },
+                new DishIngredient { DishId = 2, IngredientId = 6 },
+                new DishIngredient { DishId = 2, IngredientId = 3 },
+                new DishIngredient { DishId = 2, IngredientId = 4 }
             );
     }
 

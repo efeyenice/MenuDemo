@@ -13,6 +13,15 @@ builder.Services.AddDbContext<MenuContext>(options =>
 
 var app = builder.Build();
 
+// Initialize database
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<MenuContext>();
+    
+    // Ensure the database is created and all migrations are applied
+    context.Database.Migrate();
+}
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
