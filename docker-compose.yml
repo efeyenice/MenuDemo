@@ -1,0 +1,42 @@
+services:
+  # PostgreSQL database
+  postgres:
+    image: postgres:15-alpine
+    container_name: menudemo-postgres
+    environment:
+      - POSTGRES_DB=MenuDemo
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=YourStrongPassword123!
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - menudemo-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ASP.NET Core web application
+  web:
+    build: .
+    container_name: menudemo-web
+    ports:
+      - "5001:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Database=MenuDemo;Username=postgres;Password=YourStrongPassword123!
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - menudemo-network
+
+volumes:
+  postgres_data:
+
+networks:
+  menudemo-network:
+    driver: bridge
