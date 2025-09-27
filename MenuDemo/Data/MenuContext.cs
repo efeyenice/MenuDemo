@@ -26,7 +26,13 @@ public class MenuContext : DbContext
 
             modelBuilder.Entity<Dish>().HasData(
                 new Dish { Id = 1, Name = "Doner Durum", Price = 12.99, ImageUrl = "https://www.ustadonerci.com/media/products/durum-et-doner_b.png" },
-                new Dish { Id = 2, Name = "Patlican Kebabi", Price = 9.99, ImageUrl = "https://i.nefisyemektarifleri.com/2022/05/29/orijinal-antep-usulu-patlican-kebabi-3.jpg" }
+                new Dish { Id = 2, Name = "Patlican Kebabi", Price = 9.99, ImageUrl = "https://i.nefisyemektarifleri.com/2022/05/29/orijinal-antep-usulu-patlican-kebabi-3.jpg" },
+                new Dish { Id = 3, Name = "Adana Kebap", Price = 15.99, ImageUrl = "https://i.nefisyemektarifleri.com/2021/08/25/adana-kebap-tarifi-8.jpg" },
+                new Dish { Id = 4, Name = "Urfa Kebap", Price = 15.99, ImageUrl = "https://i.nefisyemektarifleri.com/2021/08/25/urfa-kebap-tarifi-8.jpg" },
+                new Dish { Id = 5, Name = "Lahmacun", Price = 8.99, ImageUrl = "https://i.nefisyemektarifleri.com/2020/05/19/lahmacun-tarifi-8.jpg" },
+                new Dish { Id = 6, Name = "Pide", Price = 11.99, ImageUrl = "https://i.nefisyemektarifleri.com/2020/05/19/pide-tarifi-8.jpg" },
+                new Dish { Id = 7, Name = "Manti", Price = 13.99, ImageUrl = "https://i.nefisyemektarifleri.com/2020/05/19/manti-tarifi-8.jpg" },
+                new Dish { Id = 8, Name = "Kofte", Price = 10.99, ImageUrl = "https://i.nefisyemektarifleri.com/2020/05/19/kofte-tarifi-8.jpg" }
             );
 
             modelBuilder.Entity<Ingredient>().HasData(
@@ -35,18 +41,63 @@ public class MenuContext : DbContext
                 new Ingredient { Id = 3, Name = "Domates" },
                 new Ingredient { Id = 4, Name = "Biber" },
                 new Ingredient { Id = 5, Name = "Patlican" },
-                new Ingredient { Id = 6, Name = "Kiyma" }
+                new Ingredient { Id = 6, Name = "Kiyma" },
+                new Ingredient { Id = 7, Name = "Soğan" },
+                new Ingredient { Id = 8, Name = "Sarimsak" },
+                new Ingredient { Id = 9, Name = "Hamur" },
+                new Ingredient { Id = 10, Name = "Peynir" },
+                new Ingredient { Id = 11, Name = "Yumurta" },
+                new Ingredient { Id = 12, Name = "Un" },
+                new Ingredient { Id = 13, Name = "Yoğurt" },
+                new Ingredient { Id = 14, Name = "Tereyaği" },
+                new Ingredient { Id = 15, Name = "Baharat" }
             );
 
             modelBuilder.Entity<DishIngredient>().HasData(
+                // Doner Durum
                 new DishIngredient { DishId = 1, IngredientId = 1 },
                 new DishIngredient { DishId = 1, IngredientId = 2 },
                 new DishIngredient { DishId = 1, IngredientId = 3 },
                 new DishIngredient { DishId = 1, IngredientId = 4 },
+                // Patlican Kebabi
                 new DishIngredient { DishId = 2, IngredientId = 5 },
                 new DishIngredient { DishId = 2, IngredientId = 6 },
                 new DishIngredient { DishId = 2, IngredientId = 3 },
-                new DishIngredient { DishId = 2, IngredientId = 4 }
+                new DishIngredient { DishId = 2, IngredientId = 4 },
+                // Adana Kebap
+                new DishIngredient { DishId = 3, IngredientId = 2 },
+                new DishIngredient { DishId = 3, IngredientId = 7 },
+                new DishIngredient { DishId = 3, IngredientId = 8 },
+                new DishIngredient { DishId = 3, IngredientId = 15 },
+                // Urfa Kebap
+                new DishIngredient { DishId = 4, IngredientId = 2 },
+                new DishIngredient { DishId = 4, IngredientId = 7 },
+                new DishIngredient { DishId = 4, IngredientId = 8 },
+                new DishIngredient { DishId = 4, IngredientId = 15 },
+                // Lahmacun
+                new DishIngredient { DishId = 5, IngredientId = 9 },
+                new DishIngredient { DishId = 5, IngredientId = 6 },
+                new DishIngredient { DishId = 5, IngredientId = 3 },
+                new DishIngredient { DishId = 5, IngredientId = 7 },
+                new DishIngredient { DishId = 5, IngredientId = 8 },
+                new DishIngredient { DishId = 5, IngredientId = 15 },
+                // Pide
+                new DishIngredient { DishId = 6, IngredientId = 9 },
+                new DishIngredient { DishId = 6, IngredientId = 10 },
+                new DishIngredient { DishId = 6, IngredientId = 11 },
+                new DishIngredient { DishId = 6, IngredientId = 2 },
+                // Manti
+                new DishIngredient { DishId = 7, IngredientId = 12 },
+                new DishIngredient { DishId = 7, IngredientId = 6 },
+                new DishIngredient { DishId = 7, IngredientId = 7 },
+                new DishIngredient { DishId = 7, IngredientId = 8 },
+                new DishIngredient { DishId = 7, IngredientId = 13 },
+                new DishIngredient { DishId = 7, IngredientId = 14 },
+                // Kofte
+                new DishIngredient { DishId = 8, IngredientId = 6 },
+                new DishIngredient { DishId = 8, IngredientId = 7 },
+                new DishIngredient { DishId = 8, IngredientId = 8 },
+                new DishIngredient { DishId = 8, IngredientId = 15 }
             );
     }
 
