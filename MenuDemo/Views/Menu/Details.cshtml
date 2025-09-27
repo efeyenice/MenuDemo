@@ -1,0 +1,16 @@
+@model MenuDemo.Models.Dish
+
+<div class="card" style="width: 18rem;">
+    <img src="@Model.ImageUrl" class="card-img-top" alt="@Model.Name" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Price</p>
+    </div>
+    <!-- make the ingredients a list group -->
+    <ul class="list-group list-group-flush" style="width: 18rem;">
+        @foreach (var ingredient in Model.DishIngredients!)
+        {
+            <li class="list-group-item">@ingredient.Ingredient!.Name</li>
+        }
+    </ul>
+</div>
