@@ -56,7 +56,7 @@ docker-compose up -d
 - The app connects to PostgreSQL automatically
 - Database: `MenuDemo`
 - Username: `postgres`
-- Password: `YourStrongPassword123!`
+- Password: 
 - Port: `5432` (accessible from host machine too)
 
 ## Troubleshooting

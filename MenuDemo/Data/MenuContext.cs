@@ -27,12 +27,12 @@ public class MenuContext : DbContext
             modelBuilder.Entity<Dish>().HasData(
                 new Dish { Id = 1, Name = "Doner Durum", Price = 12.99, ImageUrl = "https://www.ustadonerci.com/media/products/durum-et-doner_b.png" },
                 new Dish { Id = 2, Name = "Patlican Kebabi", Price = 9.99, ImageUrl = "https://i.nefisyemektarifleri.com/2022/05/29/orijinal-antep-usulu-patlican-kebabi-3.jpg" },
-                new Dish { Id = 3, Name = "Adana Kebap", Price = 15.99, ImageUrl = "https://i.nefisyemektarifleri.com/2021/08/25/adana-kebap-tarifi-8.jpg" },
-                new Dish { Id = 4, Name = "Urfa Kebap", Price = 15.99, ImageUrl = "https://i.nefisyemektarifleri.com/2021/08/25/urfa-kebap-tarifi-8.jpg" },
-                new Dish { Id = 5, Name = "Lahmacun", Price = 8.99, ImageUrl = "https://i.nefisyemektarifleri.com/2020/05/19/lahmacun-tarifi-8.jpg" },
-                new Dish { Id = 6, Name = "Pide", Price = 11.99, ImageUrl = "https://i.nefisyemektarifleri.com/2020/05/19/pide-tarifi-8.jpg" },
-                new Dish { Id = 7, Name = "Manti", Price = 13.99, ImageUrl = "https://i.nefisyemektarifleri.com/2020/05/19/manti-tarifi-8.jpg" },
-                new Dish { Id = 8, Name = "Kofte", Price = 10.99, ImageUrl = "https://i.nefisyemektarifleri.com/2020/05/19/kofte-tarifi-8.jpg" }
+                new Dish { Id = 3, Name = "Adana Kebap", Price = 15.99, ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/55/Adana_kebab.jpg" },
+                new Dish { Id = 4, Name = "Urfa Kebap", Price = 15.99, ImageUrl = "https://www.diyetkolik.com/site_media/media/foodrecipe_images/ufra-kabap.png" },
+                new Dish { Id = 5, Name = "Lahmacun", Price = 8.99, ImageUrl = "https://cevatusta.com.tr/wp-content/uploads/2020/11/Urfa-Lahmacun.jpg" },
+                new Dish { Id = 6, Name = "Pide", Price = 11.99, ImageUrl = "https://turkishfoodie.com/wp-content/uploads/2019/01/Pide.jpg" },
+                new Dish { Id = 7, Name = "Manti", Price = 13.99, ImageUrl = "https://i.lezzet.com.tr/images-xxlarge-secondary/manti-nasil-pisirilir-9853d099-517c-4e89-be1c-960b703dcb8e.jpg" },
+                new Dish { Id = 8, Name = "Kofte", Price = 10.99, ImageUrl = "https://www.unileverfoodsolutions.com.tr/dam/global-ufs/mcos/TURKEY/calcmenu/recipes/TR-recipes/general/k%C3%B6fte-izgara/main-header.jpg" }
             );
 
             modelBuilder.Entity<Ingredient>().HasData(
